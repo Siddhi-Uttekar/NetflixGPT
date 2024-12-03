@@ -1,7 +1,11 @@
 # NetflixGPT
 - create react app
 - configured Tailwind css
+- react router dom
+-Header
+-Login form
 
+...
 #Features
 -Login/ signup
   - Sign in/ sign up

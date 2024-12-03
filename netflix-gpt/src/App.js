@@ -1,9 +1,10 @@
 import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className= "text-slate-900">
-      <h1>helloo</h1>
+    <div >
+       <Body/>
     </div>
   );
 }
