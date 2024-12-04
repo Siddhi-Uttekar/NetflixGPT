@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import { BG_URL } from "../utils/constant";
 import Header from "./Header";
 import {checkValidata} from "../utils/validate"
+import {  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../utils/firebase";
 
 const Login = () => {
 
@@ -10,12 +12,50 @@ const Login = () => {
 
     const email = useRef(null);
     const password = useRef(null);
+    const name = useRef(null);
 
     const handleButtonClick = () => {
         //validate form data
-
         const message = checkValidata(email.current.value, password.current.value);
         setErrorMessage(message);
+
+        if(message) return;
+
+        //sign in sign up user otherwise
+        if(!isSignInForm)
+            {
+                //sign up logic
+                createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+         .then((userCredential) => {
+           // Signed up
+             const user = userCredential.user;
+           console.log(user);
+            // ...
+             })
+         .catch((error) => {
+         const errorCode = error.code;
+         const errorMessage = error.message;
+         setErrorMessage(`${errorCode} - ${errorMessage}`);
+         console.error("Error during sign up:", errorCode, errorMessage);
+
+         });
+
+            }
+        else
+           {
+            //sign in logic
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+            .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            })
+         .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-"+ errorMessage)
+          });
+           }
+
 
     }
 
@@ -38,7 +78,7 @@ const Login = () => {
 
                     <h1 className="text-slate-50 text-center font-bold text-3xl m-2 ">
                     {isSignInForm ? "Sign In": "Sign Up"}</h1>
-                    {!isSignInForm && (<input type="text" placeholder="Enter Full Name" className="p-2 m-2 w-full bg-slate-800 rounded text-white" />)}
+                    {!isSignInForm && (<input ref={name} type="text" placeholder="Enter Full Name" className="p-2 m-2 w-full bg-slate-800 rounded text-white" />)}
 
                     <input
                     ref = {email}
@@ -55,7 +95,7 @@ const Login = () => {
                     />
 
                     <p className="text-red-600  px-3 font-bold text-m">{errorMessage}</p>
-                    
+
                     <button
                     className="p-3 m-3 w-full bg-red-600 text-white text-center rounded"
                      onClick={handleButtonClick}>

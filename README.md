@@ -15,8 +15,10 @@
     - npm install -g firebase-tools
     -firebase login
       -set up the project
+    -firebase init and selecting host
     -npm run build
     -firebase deploy
+  - craete signup user account
 
 ...
 #Features
