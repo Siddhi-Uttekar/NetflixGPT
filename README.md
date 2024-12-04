@@ -4,6 +4,19 @@
 - react router dom
 -Header
 -Login form
+-validate form
+-authentication
+ -firebase
+  -make project
+  -authenticate- sign in using email/password
+  -deploy
+  #commands
+    -npm i firebase
+    - npm install -g firebase-tools
+    -firebase login
+      -set up the project
+    -npm run build
+    -firebase deploy
 
 ...
 #Features
