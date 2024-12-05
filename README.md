@@ -18,7 +18,11 @@
     -firebase init and selecting host
     -npm run build
     -firebase deploy
-  - craete signup user account
+    - create signup user account
+  -npm i -D @reduxjs/toolkit
+  -redux store with userSlice
+   -npm i react-redux
+
 
 ...
 #Features
