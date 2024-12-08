@@ -46,6 +46,7 @@ const Header = () => {
 
     // Clean up subscription on unmount
     //dependency array ensures useEffect only runs when dispatch or navigate changes,
+    //prevents infinite loop by only using useEffect for the above
     return () => unsubscribe();
   }, [dispatch, navigate]);
 

@@ -27,6 +27,18 @@
  -navigation page - go to browse only after login
                   - no access to /browse if user is not logged in
 
+-tmdb
+ -login -> edit profile -> api -> register your app  -> find api key and access token
+ -> get data from documentation  - movieslisting    -now playing
+
+--In Browse Page --
+-maincontainer
+ - videobackground
+ - videotitle
+-secondaryco tainer
+ -movielist*n
+  -cards*n
+
 
 ...
 #Features
