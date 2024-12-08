@@ -23,6 +23,10 @@
   -redux store with userSlice
    -npm i react-redux
 
+-fixing some bugs
+ -navigation page - go to browse only after login
+                  - no access to /browse if user is not logged in
+
 
 ...
 #Features
