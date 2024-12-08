@@ -31,6 +31,7 @@
  -login -> edit profile -> api -> register your app  -> find api key and access token
  -> get data from documentation  - movieslisting    -now playing
 
+--operate in incognito to avoid extension bugs
 --In Browse Page --
 -maincontainer
  - videobackground
@@ -38,6 +39,15 @@
 -secondaryco tainer
  -movielist*n
   -cards*n
+
+-custom hooks for nowplaying
+-create movieSlice
+-update store with movies Data
+-planning for mainContainer and secondary container
+-fetch data for trailer video
+-update store with tariler video data
+-embedded the youtube video and make it autoplay mute
+-tailwind to make it look awesome!
 
 
 ...
