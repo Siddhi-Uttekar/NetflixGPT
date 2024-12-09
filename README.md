@@ -49,6 +49,11 @@
 -embedded the youtube video and make it autoplay mute
 -tailwind to make it look awesome!
 
+-secondary movielist
+ movielist  each will have movieCards*n
+         - popular, nowplaying, trending, horror
+
+
 
 ...
 #Features

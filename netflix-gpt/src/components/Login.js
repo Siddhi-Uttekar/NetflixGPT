@@ -28,8 +28,8 @@ const Login = () => {
                 //sign up logic
                 createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
          .then((userCredential) => {
-             const user = userCredential.user;
-             console.log(user)
+            //  const user = userCredential.user;
+
 
                })
          .catch((error) => {
@@ -45,8 +45,8 @@ const Login = () => {
             //sign in logic
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
             .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user)
+            // const user = userCredential.user;
+
 
             })
          .catch((error) => {
