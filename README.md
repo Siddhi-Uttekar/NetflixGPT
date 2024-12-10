@@ -53,6 +53,14 @@
  movielist  each will have movieCards*n
          - popular, nowplaying, trending, horror
 
+-build gpt recommendation page
+  -implemented multi lang options
+  -implemented toggle for gptsearch and lang button
+  -go to
+    -platform.openai.com
+    -generate secret key from api keys
+  -install library - npm install --save openai
+
 
 
 ...

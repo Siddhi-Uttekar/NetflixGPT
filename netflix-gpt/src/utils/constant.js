@@ -16,3 +16,13 @@ export const BG_URL =
 	  };
 
 	  export const IMG_CDN_URL =" https://image.tmdb.org/t/p/w500/";
+
+	  export const SUPPORTED_LANGUAGES = [
+		{identifier : "en", name : "English"},
+		{identifier : "hindi", name : "Hindi"},
+	    {identifier : "spanish", name : "Spanish"}
+	  ]
+
+	//   export const OPENAI_KEY = "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";
+
+	  export const OPENAI_KEY = "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";

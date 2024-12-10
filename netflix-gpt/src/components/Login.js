@@ -102,10 +102,13 @@ const Login = () => {
                     {isSignInForm?  "Sign In" : "Sign Up"}
                     </button>
 
-                    <p className="py-4 px-3 text-slate-50 cursor-pointer "
+                    <p className="py-2 px-3 text-slate-50 cursor-pointer "
                        onClick={toggleSignInForm}>
                        {isSignInForm? " New to Netflix? Sign Up Now" : "Already registered? Sign In"}
                     </p>
+                    <p className="text-white px-3 text-center font-bold">or use</p>
+                    <h6 className="text-white px-3">email : test@gmail.com</h6>
+                    <h6 className="text-white px-3">password : Test@123</h6>
 
 
                 </form>
