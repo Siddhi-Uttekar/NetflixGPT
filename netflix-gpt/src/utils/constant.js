@@ -11,7 +11,7 @@ export const BG_URL =
 		method: 'GET',
 		headers: {
 		  accept: 'application/json',
-		  Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZmVhZWI2NmU5MmI1M2M4ZDc0NDFmNWM4OWNiMDVlMyIsIm5iZiI6MTczMzY1NjIwNS42NjIwMDAyLCJzdWIiOiI2NzU1N2U4ZGVlMzNiMTA5N2FjMDZhNmQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ypZnHG-oo8r0s9relxup8sCF879lU-vhHaapUIjUB74'
+		  Authorization:  "Bearer " + process.env.REACT_APP_TMDB_KEY
 		}
 	  };
 
@@ -22,7 +22,3 @@ export const BG_URL =
 		{identifier : "hindi", name : "Hindi"},
 	    {identifier : "spanish", name : "Spanish"}
 	  ]
-
-	//   export const OPENAI_KEY = "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";
-
-	  export const OPENAI_KEY = "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";
