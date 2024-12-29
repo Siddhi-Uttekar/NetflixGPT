@@ -1,9 +1,9 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import { useNavigate } from "react-router-dom";
+
 
 function MovieList({ title, movies }) {
-	const navigate = useNavigate();
+
 
 	// console.log(movies);
 	if (!movies || movies.length === 0) {
